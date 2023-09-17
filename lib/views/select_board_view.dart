@@ -234,7 +234,7 @@ class UnownedCard extends StatelessWidget {
                   ),
                   FilledButton(
                     onPressed: () {},
-                    child: const Text("Apply"),
+                    child: const Text("Buy"),
                   ),
                 ],
               ),

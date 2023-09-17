@@ -34,7 +34,10 @@ class _GameBoardViewState extends State<GameBoardView> {
                     child: SizedBox(),
                   ),
                   Chip(
-                    label: const Text("4:11"),
+                    label: const Text(
+                      "4:11",
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
                     side: BorderSide.none,
                     color: MaterialStatePropertyAll(
                       Theme.of(context).colorScheme.secondaryContainer,
