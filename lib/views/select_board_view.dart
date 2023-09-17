@@ -30,148 +30,36 @@ class _SelectBoardViewState extends State<SelectBoardView> {
               const SizedBox(
                 height: 22,
               ),
-              Expanded(
+              const Expanded(
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 1"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      OwnedCard(),
+                      SizedBox(
                         height: 16,
                       ),
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 2"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      OwnedCard(),
+                      SizedBox(
                         height: 16,
                       ),
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 3"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      OwnedCard(),
+                      SizedBox(
                         height: 16,
                       ),
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 4"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      UnownedCard(),
+                      SizedBox(
                         height: 16,
                       ),
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 5"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      UnownedCard(),
+                      SizedBox(
                         height: 16,
                       ),
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 6"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      UnownedCard(),
+                      SizedBox(
                         height: 16,
                       ),
-                      Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.outline,
-                          ),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: const SizedBox(
-                          width: 350,
-                          height: 100,
-                          child: Center(
-                            child: Text("Game 7"),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
+                      UnownedCard(),
+                      SizedBox(
                         height: 16,
                       ),
                     ],
@@ -209,6 +97,180 @@ class _SelectBoardViewState extends State<SelectBoardView> {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class OwnedCard extends StatelessWidget {
+  const OwnedCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(
+          color: Theme.of(context).colorScheme.outline,
+        ),
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
+      ),
+      child: Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 10, 10.5, 14),
+              child: Row(
+                children: [
+                  const Text(
+                    "American city highway",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const Expanded(
+                    child: SizedBox(),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text("Apply"),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 10, 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.surfing),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.electric_bike),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.electric_car),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.grass),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class UnownedCard extends StatelessWidget {
+  const UnownedCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(
+          color: Theme.of(context).colorScheme.outline,
+        ),
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
+      ),
+      child: Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 10, 10.5, 14),
+              child: Row(
+                children: [
+                  const Text(
+                    "American city highway",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const Expanded(
+                    child: SizedBox(),
+                  ),
+                  FilledButton(
+                    onPressed: () {},
+                    child: const Text("Apply"),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 10, 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.surfing),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.electric_bike),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.electric_car),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Container(
+                    color: const Color(0xffd9d9d9),
+                    width: 30,
+                    height: 28,
+                    child: const Icon(Icons.grass),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

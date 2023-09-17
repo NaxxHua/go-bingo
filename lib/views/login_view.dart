@@ -25,7 +25,14 @@ class LoginView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SelectBoardView(),
+                      ),
+                    );
+                  },
                   child: const Text("Sign up"),
                 ),
                 const SizedBox(
