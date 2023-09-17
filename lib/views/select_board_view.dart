@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_bingo/views/game_board_view.dart';
 
 const List<String> list = <String>[
   "Classic mode",
@@ -91,7 +92,14 @@ class _SelectBoardViewState extends State<SelectBoardView> {
                   ),
                   FloatingActionButton(
                     child: const Icon(Icons.play_arrow),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const GameBoardView(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -203,7 +211,9 @@ class UnownedCard extends StatelessWidget {
         side: BorderSide(
           color: Theme.of(context).colorScheme.outline,
         ),
-        borderRadius: const BorderRadius.all(Radius.circular(12)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(12),
+        ),
       ),
       child: Center(
         child: Column(
