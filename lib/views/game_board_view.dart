@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_bingo/views/invite_view.dart';
 import 'package:go_bingo/views/post_game_view.dart';
+import 'package:go_bingo/views/select_board_view.dart';
 
 class GameBoardView extends StatefulWidget {
   const GameBoardView({super.key});
@@ -142,7 +144,14 @@ class _GameBoardViewState extends State<GameBoardView> {
                         shape: const CircleBorder(),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SelectBoardView(),
+                            ),
+                          );
+                        },
                         icon: const Icon(
                           Icons.switch_access_shortcut,
                         ),
@@ -158,7 +167,14 @@ class _GameBoardViewState extends State<GameBoardView> {
                         shape: const CircleBorder(),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const InviteView(),
+                            ),
+                          );
+                        },
                         icon: const Icon(
                           Icons.share,
                         ),

@@ -8,26 +8,26 @@ class PostGameView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.fromLTRB(28, 54, 19, 21),
+        padding: const EdgeInsets.fromLTRB(28, 54, 19, 21),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: Text("Post-game stats"),
             ),
-            SizedBox(
+            const SizedBox(
               height: 43,
             ),
-            Text(
+            const Text(
               "Items found: 17",
             ),
-            SizedBox(
+            const SizedBox(
               height: 19,
             ),
-            Text(
+            const Text(
               "Time played: ",
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -40,7 +40,7 @@ class PostGameView extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text("Main menu"),
+                  child: const Text("Main menu"),
                 ),
               ],
             ),
