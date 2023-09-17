@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_bingo/views/select_board_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginView extends StatelessWidget {
@@ -31,7 +32,14 @@ class LoginView extends StatelessWidget {
                   width: 18,
                 ),
                 FilledButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SelectBoardView(),
+                      ),
+                    );
+                  },
                   child: const Text("Log in"),
                 ),
               ],
