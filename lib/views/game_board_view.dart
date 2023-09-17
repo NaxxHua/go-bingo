@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_bingo/views/post_game_view.dart';
 
 class GameBoardView extends StatefulWidget {
   const GameBoardView({super.key});
@@ -118,7 +119,14 @@ class _GameBoardViewState extends State<GameBoardView> {
                         shape: const CircleBorder(),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const PostGameView(),
+                            ),
+                          );
+                        },
                         icon: const Icon(
                           Icons.stop,
                         ),
